@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Perplexity 2.0
 
 A modern, responsive AI chat interface with integrated web search functionality. Perplexity 2.0 provides a clean UI similar to Perplexity.ai, combining conversational AI with real-time search capabilities
@@ -107,4 +107,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 =======
 # Perpexility-2.0
 A modern, responsive AI chat interface with integrated web search functionality. Perplexity 2.0 provides a clean UI similar to Perplexity.ai, combining conversational AI with real-time search capabilities
->>>>>>> 90244a18c36c446bf7c4ef6a294cb18848b10b99
+
