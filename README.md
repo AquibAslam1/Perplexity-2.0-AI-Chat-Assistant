@@ -1,110 +1,133 @@
+# Perplexity 2.0 – AI Chat Assistant
 
-# Perplexity 2.0
+A modern, responsive AI chat interface with integrated web search functionality. Perplexity 2.0 provides a clean UI similar to Perplexity.ai, combining conversational AI with real-time search capabilities.
 
-A modern, responsive AI chat interface with integrated web search functionality. Perplexity 2.0 provides a clean UI similar to Perplexity.ai, combining conversational AI with real-time search capabilities
+---
 
 ## ✨ Features
 
-- **Real-time AI Responses** - Stream AI responses as they're generated
-- **Integrated Web Search** - AI can search the web for up-to-date information
-- **Conversation Memory** - Maintains context throughout your conversation
-- **Search Process Transparency** - Visual indicators show searching, reading, and writing stages
-- **Responsive Design** - Clean, modern UI that works across devices
+* Real-time AI Responses (streaming)
+* Integrated Web Search (Tavily API)
+* Conversation Memory
+* Search Process Transparency
+* Responsive UI
+
+---
 
 ## 🏗️ Architecture
 
 Perplexity 2.0 follows a client-server architecture:
 
 ### Client (Next.js + React)
-- Modern React application built with Next.js
-- Real-time streaming updates using Server-Sent Events (SSE)
-- Components for message display, search status, and input handling
 
-### Server (FastAPI + LangGraph)
-- Python backend using FastAPI for API endpoints
-- LangGraph implementation for conversation flow with LLM and tools
-- Integration with Tavily Search API for web searching capabilities
-- Server-Sent Events for real-time streaming of AI responses
+* Modern React application built with Next.js
+* Real-time streaming using Server-Sent Events (SSE)
+* Components for chat UI and interaction
+
+### Server (FastAPI)
+
+* Python backend using FastAPI
+* LLM API integration for response generation
+* Tavily API integration for web search
+* Streaming responses using SSE
+
+---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 18+
-- Python 3.10+
-- OpenAI API key
-- Tavily API key
+* Node.js 18+
+* Python 3.10+
+* OpenAI API Key
+* Tavily API Key
 
-### Installation
+---
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/AquibAslam1/Perplexity-2.0-AI-Chat-Assistant
-   cd perplexity_2.0
+## ⚙️ Installation
 
-2. **Set up the server**
-   ```bash
-   cd server
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   pip install -r requirements.txt
+### 1. Clone Repository
 
-3. **Configure environment variables**  
-   Create a `.env` file in the server directory:
-   OPENAI_API_KEY=your_openai_api_key
-   TAVILY_API_KEY=your_tavily_api_key
-   
-4. **Set up the client**
+```bash
+git clone https://github.com/AquibAslam1/Perplexity-2.0-AI-Chat-Assistant
+cd perplexity_2.0
+```
+
+### 2. Setup Backend
+
+```bash
+cd server
+python -m venv venv
+venv\Scripts\activate   # Windows
+pip install -r requirements.txt
+```
+
+Create `.env` file:
+
+```
+OPENAI_API_KEY=your_openai_api_key
+TAVILY_API_KEY=your_tavily_api_key
+```
+
+---
+
+### 3. Setup Frontend
+
 ```bash
 cd ../client
 npm install
+```
 
-### Running the Application
+---
 
-1. **Start the server**
-   ```bash
-   cd server
-   uvicorn app:app --reload
+## ▶️ Run Application
 
-2. **Start the client**
-   ```bash
-   cd client
-   npm run dev
+### Start Backend
 
-3. **Open your browser and navigate to http://localhost:3000**   
+```bash
+cd server
+uvicorn app:app --reload
+```
+
+### Start Frontend
+
+```bash
+cd client
+npm run dev
+```
+
+👉 Open: http://localhost:3000
+
+---
 
 ## 🔍 How It Works
 
-1. **User sends a message** through the chat interface
-2. **Server processes the message** using GPT-4o
-3. **AI decides** whether to use search or respond directly
-4. If search is needed:
-   - Search query is sent to Tavily API
-   - Results are processed and provided back to the AI
-   - AI uses this information to formulate a response
-5. **Response is streamed** back to the client in real-time
-6. **Search stages are displayed** to the user (searching, reading, writing)
+1. User sends a message
+2. Backend processes input using LLM
+3. If needed, web search is triggered
+4. Tavily API returns relevant results
+5. LLM generates final response
+6. Response is streamed to UI
 
-## 🤝 Contributing
+---
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+## 🛠 Tech Stack
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+* Frontend: React (Next.js)
+* Backend: FastAPI
+* AI: LLM API Integration
+* Search: Tavily API
+
+---
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+MIT License
+
+---
 
 ## 🙏 Acknowledgments
 
-- Inspired by the UI and functionality of [Perplexity.ai](https://www.perplexity.ai/)
-- Built with [Next.js](https://nextjs.org/), [React](https://reactjs.org/), [FastAPI](https://fastapi.tiangolo.com/), and [LangGraph](https://github.com/langchain-ai/langgraph)
-- Powered by [OpenAI GPT-4o](https://openai.com/) and [Tavily Search API](https://tavily.com/)
-=======
-# Perpexility-2.0
-A modern, responsive AI chat interface with integrated web search functionality. Perplexity 2.0 provides a clean UI similar to Perplexity.ai, combining conversational AI with real-time search capabilities
-
+* Inspired by Perplexity AI
+* Built using Next.js, React, FastAPI
+* Powered by OpenAI & Tavily API
