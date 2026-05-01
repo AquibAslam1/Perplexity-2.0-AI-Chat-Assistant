@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Perplexity 2.0
 
 A modern, responsive AI chat interface with integrated web search functionality. Perplexity 2.0 provides a clean UI similar to Perplexity.ai, combining conversational AI with real-time search capabilities
@@ -103,3 +104,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Inspired by the UI and functionality of [Perplexity.ai](https://www.perplexity.ai/)
 - Built with [Next.js](https://nextjs.org/), [React](https://reactjs.org/), [FastAPI](https://fastapi.tiangolo.com/), and [LangGraph](https://github.com/langchain-ai/langgraph)
 - Powered by [OpenAI GPT-4o](https://openai.com/) and [Tavily Search API](https://tavily.com/)
+=======
+# Perpexility-2.0
+A modern, responsive AI chat interface with integrated web search functionality. Perplexity 2.0 provides a clean UI similar to Perplexity.ai, combining conversational AI with real-time search capabilities
+>>>>>>> 90244a18c36c446bf7c4ef6a294cb18848b10b99
